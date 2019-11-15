@@ -1,0 +1,70 @@
+.player-btn-1 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-image: url("./img/hand.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+
+  &:hover {
+    box-shadow: 0 0 80px #2196f3;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 80px #2196f3;
+    outline: none;
+  }
+}
+
+.player-btn-2 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-image: url("./img/hand-rock.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+
+  &:hover {
+    box-shadow: 0 0 80px #2196f3;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 80px #2196f3;
+    outline: none;
+  }
+}
+
+.player-btn-3 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-image: url("./img/hand-scissor.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+  &:hover {
+    box-shadow: 0 0 80px #2196f3;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 80px #2196f3;
+    outline: none;
+  }
+}

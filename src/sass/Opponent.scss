@@ -1,0 +1,95 @@
+.opponent {
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-image: url("./img/hand.png");
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+}
+
+.opponent-card {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-image: url("./img/hand.png");
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+  z-index: 1;
+}
+
+.opponent-card-2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("./img/hand-rock.png");
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+  z-index: 3;
+}
+
+.opponent-card-3 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("./img/hand-scissor.png");
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+  z-index: 2;
+}
+
+.opponent-card-animated {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #2196f3;
+  border-radius: 500px;
+  background-color: #2196f3;
+  filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
+  animation-name: change;
+  animation-duration: 3s;
+}
+
+@keyframes change {
+  33% {
+    background-image: url("./img/hand-rock.png");
+  }
+
+  66% {
+    background-image: url("./img/hand-scissor.png");
+  }
+
+  100% {
+    background-image: url("./img/hand.png");
+  }
+}
