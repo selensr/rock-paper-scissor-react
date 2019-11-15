@@ -19,23 +19,26 @@ class App extends React.Component {
   }
 
   runGame = choice => {
+    const opponentR = opponentRandom();
+    const result = decideWinner(choice, opponentRandom());
     this.setState({ start: true }, () => {
       setTimeout(() => {
         this.setState({
           start: false,
           playerHand: choice,
-          opponentHand: opponentRandom(),
-          result: decideWinner(this.state.playerHand, this.state.opponentHand),
-          wins: this.state.result === "win" ? (this.state.wins += 1) : null,
+          opponentHand: opponentR,
+          result: result,
+          wins:
+            this.state.result === "win" ? this.state.wins + 1 : this.state.wins,
           losses:
-            this.state.result === "lose" ? (this.state.losses += 1) : null,
-          draws: this.state.result === "draw" ? (this.state.draws += 1) : null
+            this.state.result === "lose"
+              ? this.state.losses + 1
+              : this.state.losses,
+          draws:
+            this.state.result === "draw"
+              ? this.state.draws + 1
+              : this.state.draws
         });
-
-        console.log(this.state.draws);
-        console.log(this.state.losses);
-        console.log(this.state.wins);
-        console.log(this.state.opponentHand);
       }, 3000);
     });
   };
