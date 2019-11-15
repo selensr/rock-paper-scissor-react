@@ -20,7 +20,7 @@ class App extends React.Component {
 
   runGame = choice => {
     const opponentR = opponentRandom();
-    const result = decideWinner(choice, opponentRandom());
+    const result = decideWinner(choice, opponentR);
     this.setState({ start: true }, () => {
       setTimeout(() => {
         this.setState({
@@ -28,16 +28,9 @@ class App extends React.Component {
           playerHand: choice,
           opponentHand: opponentR,
           result: result,
-          wins:
-            this.state.result === "win" ? this.state.wins + 1 : this.state.wins,
-          losses:
-            this.state.result === "lose"
-              ? this.state.losses + 1
-              : this.state.losses,
-          draws:
-            this.state.result === "draw"
-              ? this.state.draws + 1
-              : this.state.draws
+          wins: result === "win" ? this.state.wins + 1 : this.state.wins,
+          losses: result === "lose" ? this.state.losses + 1 : this.state.losses,
+          draws: result === "draw" ? this.state.draws + 1 : this.state.draws
         });
       }, 3000);
     });
