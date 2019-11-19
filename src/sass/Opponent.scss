@@ -76,20 +76,24 @@
   border-radius: 500px;
   background-color: #2196f3;
   filter: drop-shadow(0px 0px 10px rgb(99, 4, 189));
-  animation-name: change;
-  animation-duration: 3s;
+  transition: transform 3s ease;
 }
 
-@keyframes change {
-  33% {
-    background-image: url("./img/hand-rock.png");
-  }
+// @keyframes change {
+//   33% {
+//     background-image: url("./img/hand-rock.png");
+//   }
 
-  66% {
-    background-image: url("./img/hand-scissor.png");
-  }
+//   66% {
+//     background-image: url("./img/hand-scissor.png");
+//   }
 
-  100% {
-    background-image: url("./img/hand.png");
-  }
+//   100% {
+//     background-image: url("./img/hand.png");
+//   }
+// }
+
+.opponent-card-animated:nth-child(1) {
+  transform: rotateY(-360deg);
+  background-image: url("./img/hand.png");
 }
