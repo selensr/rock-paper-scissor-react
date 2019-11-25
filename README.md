@@ -1,4 +1,5 @@
 # rock-paper-scissor-react
 
 Rock Paper Scissor (React)
-![rps](./components/sass/rps.png)
+
+![rps](https://ibb.co/PrRXp9v)
